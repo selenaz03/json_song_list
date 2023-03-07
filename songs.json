@@ -1,0 +1,138 @@
+[
+    {
+        "artist": "The Weeknd",
+        "title": "Die for You",
+        "genres": {
+            "genre1": "R&B",
+            "genre2": "Soul"
+        },
+        "year": 2017
+    },
+    {
+        "artist": "Taylor Swift",
+        "title": "Enchanted",
+        "genres": {
+            "genre1": "Pop",
+            "genre2": "Country"
+        },
+        "year": 2010
+    },
+    {
+        "artists": {
+            "artist1": "Justin Bieber",
+            "artist2": "The Kid LAROI"
+        },
+        "title": "STAY",
+        "genre": "Soul",
+        "year": 2021
+    },
+    {
+        "artist": "Justin Bieber",
+        "title": "Ghost",
+        "genre": "Pop",
+        "year": 2021
+    },
+    {
+        "artist": "SZA",
+        "title": "Kill Bill",
+        "genres": {
+            "genre1": "Pop",
+            "genre2": "R&B"
+        },
+        "year": 2022
+    },
+    {
+        "artist": "Paramore",
+        "title": "Miserty Business",
+        "genres": {
+            "genre1": "Rock",
+            "genre2": "Indie"
+        },
+        "year": 2022
+    },
+    {
+        "artists": {
+            "artist1": "The Weeknd",
+            "artist2": "21 Savage"
+        },
+        "title": "Creepin",
+        "genres": {
+            "genre1": "Hip Hop",
+            "genre2": "Rap"
+        },
+        "year": 2022
+    },
+    {
+        "artist": "Steve Lacy",
+        "title": "Bad Habit",
+        "genres": {
+            "genre1": "R&B",
+            "genre2": "Soul",
+            "genre3": "Indie"
+        },
+        "year": 2022
+    },
+    {
+        "artist": "Justin Bieber",
+        "title": "Boyfriend",
+        "genres": {
+            "genre1": "R&B",
+            "genre2": "Soul",
+            "genre3": "Pop"
+        },
+        "year": 2012
+    },
+    {
+        "artist": "Taylor Swift",
+        "title": "august",
+        "genres": {
+            "genre1": "Indie",
+            "genre2": "Pop"
+        },
+        "year": 2020
+    },
+    {
+        "artist": "Sweater Wearther",
+        "title": "The Neighbourhood",
+        "genre": "Indie",
+        "year": 2013
+    },
+    {
+        "artist": "As It Was",
+        "title": "Harry Styles",
+        "genres": {
+            "genre1": "Funk",
+            "genre2": "R&B",
+            "genre3": "Pop"
+        },
+        "year": 2022
+    },
+    {
+        "artist": "Steve Lacy",
+        "title": "Dark Red",
+        "genres": {
+            "genre1": "R&B",
+            "genre2": "Soul"
+        },
+        "year": 2017
+    },
+    {
+        "artist": "Frank Ocean",
+        "title": "Lost",
+        "genres": {
+            "genre1": "R&B",
+            "genre2": "Soul",
+            "genre3": "Pop"
+        },
+        "year": 2012
+    },
+    {
+        "artist": "Dayglow",
+        "title": "Hot Rod",
+        "genres": {
+            "genre1": "Indie",
+            "genre2": "Pop"
+        },
+        "year": 2018
+    }
+]
