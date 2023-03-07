@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song List</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: rgb(202, 237, 216);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON Song List</h1>
+    <h2>Part 2</h2>
+    <div id="raw"></div>
+    <br />
+    <h2>Part 3</h2>
+    <div id="songList"></div>
+    <form>
+        <select id="genreSelect">
+            <option value="R&B">R&B</option>
+            <option value="Soul">Soul</option>
+            <option value="Pop">Pop</option>
+            <option value="Indie">Indie</option>
+            <option value="Hip Hop">Hip Hop</option>
+            <option value="Rap">Rap</option>
+            <option value="Rock">Rock</option>
+            <option value="Country">Country</option>
+        </select>
+        <br /><br />
+        <button id="filterButton">Filter</button>
+        <br /><br />
+        <div id="filteredSongs"></div>
+        <br />
+        
+    </form>
+    <script language="javascript">
+
+        var contents;
+        $(document).ready(function() {
+            $.get("https://selenaz03.github.io/json_song_list/songs.json", 
+            function( data ) {
+                contents = data;
+                let strHTML= "<ul>";
+                data.forEach(function(song) { 
+                    strHTML += "<li>" 
+                    + "Artist(s): " + artists(song.artist) + "<br />"
+                    + "Title: " + song.title + "<br />"
+                    + "Genre(s): " + genres(song.genre) + "<br />"
+                    + "Year: " + song.year + "<br /><br /></li>";
+                }) 
+                strHTML += "</ul>";
+                $('#songList').html(strHTML);
+                $('#raw').html(JSON.stringify(data));
+                
+                $('#filterButton').click(function(event) {
+                    event.preventDefault();
+                    var targetGenre = document.getElementById("genreSelect").value;
+                    var filtered = " ";
+                    data.forEach(function(song) {
+                        for (let i = 0; i < song.genre.length; i++) {
+                            if (song.genre[i] == targetGenre) {
+                                filtered += song.title + ", ";
+                            }
+                        }
+                    })
+                    $('#filteredSongs').html(filtered.substring(0, filtered.length - 2));
+                })
+
+
+            })
+
+            
+        });
+
+        // console.log(contents.length);
+
+        
+
+        
+        
+        function artists(artist) {
+            let print = "";
+            for (let i = 0; i < artist.length; i++) {
+                if (i == artist.length - 1) {
+                    print += artist[i];
+                } else {
+                    print += artist[i] + ", ";
+                }
+            }
+
+            return print;
+        }
+
+        function genres(genre) {
+            let print = "";
+            for (let i = 0; i < genre.length; i++) {
+                if (i == genre.length - 1) {
+                    print += genre[i];
+                } else {
+                    print += genre[i] + ", ";
+                }
+            }
+
+            return print;
+        }
+
+        // function filterSongs(genre, targetGenre) {
+        //     for (let i = 0; i < genre.length; i++) {
+        //         if (genre == targetGenre) {
+
+        //         }
+        //     }
+        // }
+    </script> 
+</body>
+</html>
